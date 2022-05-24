@@ -1,8 +1,8 @@
 # Cross compiling with zig cc
 
-Andrew Kelley announced `zig cc`, a replacement for GCC/clang, with [this blog post](https://andrewkelley.me/post/zig-cc-powerful-drop-in-replacement-gcc-clang.html).  In this repository I want to experiment cross compiling a sample Go project with C dependencies using `zig cc`.
+Andrew Kelley announced `zig cc`, a replacement for GCC/clang, with [this blog post](https://andrewkelley.me/post/zig-cc-powerful-drop-in-replacement-gcc-clang.html).  In this repository I want to experiment with cross compiling a sample Go project with C dependencies using `zig cc`.
 
-You can list `zig` targets using `zig targets`, e.g. to list all libc targets for amd64 linux:
+To list compilation targets use `zig targets`, e.g. to list all libc targets for amd64 linux:
 
 ```sh
 $ zig targets | jq -r '.libc[] | select(startswith("x86_64-linux"))'
